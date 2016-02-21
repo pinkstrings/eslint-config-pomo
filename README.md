@@ -1,6 +1,6 @@
 # eslint-config-pomo
 
-Based on eslint-config-airbnb@5.0.0. I use this ever day, but it is completely untested; use at your own risk.
+Based on eslint-config-airbnb@5.0.0. I use this every day, but it is completely untested; use at your own risk.
 
 ## Usage
 
