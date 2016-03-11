@@ -15,7 +15,7 @@ module.exports = {
     // disallow use of undefined when initializing variables
     'no-undef-init': 0,
     // disallow use of undeclared variables unless mentioned in a /*global */ block
-    'no-undef': 1,
+    'no-undef': 2,
     // disallow use of undefined variable
     'no-undefined': 0,
     // disallow declaration of variables that are not used in the code
