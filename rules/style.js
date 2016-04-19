@@ -99,7 +99,7 @@ module.exports = {
     // enforce spacing before and after semicolons
     'semi-spacing': [2, { 'before': false, 'after': true }],
     // require or disallow use of semicolons instead of ASI
-    'semi': [2, 'always'],
+    'semi': [2, 'never'],
     // sort variables within the same declaration block
     'sort-vars': 0,
     // require or disallow space before blocks
