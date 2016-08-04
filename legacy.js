@@ -1,11 +1,10 @@
 module.exports = {
   extends: [
-    'eslint-config-pomo/rules/best-practices',
-    'eslint-config-pomo/rules/errors',
-    'eslint-config-pomo/rules/legacy',
-    'eslint-config-pomo/rules/node',
-    'eslint-config-pomo/rules/style',
-    'eslint-config-pomo/rules/variables'
+    './rules/best-practices',
+    './rules/errors',
+    './rules/node',
+    './rules/style',
+    './rules/variables'
   ].map(require.resolve),
   env: {
     browser: true,
@@ -16,5 +15,7 @@ module.exports = {
   },
   ecmaFeatures: {},
   globals: {},
-  rules: {}
+  rules: {
+    'comma-dangle': [2, 'never']
+  }
 };

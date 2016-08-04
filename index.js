@@ -1,8 +1,18 @@
 module.exports = {
   extends: [
-    'eslint-config-pomo/base',
-    'eslint-config-pomo/rules/strict',
-    'eslint-config-pomo/rules/react',
+    './rules/best-practices',
+    './rules/errors',
+    './rules/node',
+    './rules/style',
+    './rules/variables',
+    './rules/es6',
+    './rules/imports',
   ].map(require.resolve),
-  rules: {}
+  parserOptions: {
+    ecmaVersion: 7,
+    sourceType: 'module',
+  },
+  rules: {
+    strict: 2,
+  }
 };
