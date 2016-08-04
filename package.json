@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-pomo",
-  "version": "1.2.0",
-  "description": "Custom eslint config, based on eslint-config-airbnb@5.0.0",
+  "version": "1.2.1",
+  "description": "Custom eslint config, based on eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
     "fix": "eslint --fix ./rules && exit 1",
