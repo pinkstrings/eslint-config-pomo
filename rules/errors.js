@@ -1,7 +1,7 @@
 module.exports = {
   rules: {
     // require trailing commas in multiline object literals
-    'comma-dangle': [2, 'always-multiline'],
+    'comma-dangle': [2, 'never'],
 
     // disallow assignment in conditional expressions
     'no-cond-assign': [2, 'always'],
