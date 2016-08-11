@@ -3,6 +3,10 @@ module.exports = {
     // require trailing commas in multiline object literals
     'comma-dangle': [2, 'never'],
 
+    // Restrict file extensions that may be required
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    'import/extensions': [2, {extensions: ['.jsx', '.js']}],
+
     // disallow assignment in conditional expressions
     'no-cond-assign': [2, 'always'],
 
