@@ -5,7 +5,7 @@ module.exports = {
 
     // Restrict file extensions that may be required
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    'import/extensions': [2, {extensions: ['.jsx', '.js']}],
+    'import/extensions': [2, {js: 'never', json: 'always'}],
 
     // disallow assignment in conditional expressions
     'no-cond-assign': [2, 'always'],
