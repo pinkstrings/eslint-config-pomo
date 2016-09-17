@@ -1,107 +1,142 @@
 module.exports = {
+  env: {
+    es6: true
+  },
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module'
+  },
+  plugins: [
+    'import'
+  ],
+
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.json']
+      }
+    },
+    'import/extensions': [
+      '.js',
+      '.jsx',
+    ],
+    'import/core-modules': [
+    ],
+    'import/ignore': [
+      'node_modules',
+      '\\.(coffee|scss|css|less|hbs|svg|json)$',
+    ],
+  },
+
   rules: {
-    // require trailing commas in multiline object literals
-    'comma-dangle': [2, 'never'],
+    // Static analysis:
 
-    // Restrict file extensions that may be required
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    'import/extensions': [2, {js: 'never', json: 'always'}],
+    // ensure imports point to files/modules that can be resolved
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+    'import/no-unresolved': ['error', {commonjs: true}],
 
-    // disallow assignment in conditional expressions
-    'no-cond-assign': [2, 'always'],
+    // ensure named imports coupled with named exports
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
+    'import/named': 'off',
 
-    // disallow use of console
-    'no-console': 1,
+    // ensure default import coupled with default export
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
+    'import/default': 'off',
 
-    // disallow use of constant expressions in conditions
-    'no-constant-condition': 1,
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
+    'import/namespace': 'off',
 
-    // disallow control characters in regular expressions
-    'no-control-regex': 2,
+    // Helpful warnings:
 
-    // disallow use of debugger
-    'no-debugger': 2,
+    // disallow invalid exports, e.g. multiple defaults
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
+    'import/export': 'error',
 
-    // disallow duplicate arguments in functions
-    'no-dupe-args': 2,
+    // do not allow a default import name to match a named export
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
+    'import/no-named-as-default': 'error',
 
-    // disallow duplicate keys when creating object literals
-    'no-dupe-keys': 2,
+    // warn on accessing default export property names that are also named exports
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
+    'import/no-named-as-default-member': 'error',
 
-    // disallow a duplicate case label.
-    'no-duplicate-case': 2,
+    // disallow use of jsdoc-marked-deprecated imports
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
+    'import/no-deprecated': 'off',
 
-    // disallow empty statements
-    'no-empty': 2,
-
-    // disallow the use of empty character classes in regular expressions
-    'no-empty-character-class': 2,
-
-    // disallow assigning to the exception in a catch block
-    'no-ex-assign': 2,
-
-    // disallow double-negation boolean casts in a boolean context
-    // http://eslint.org/docs/rules/no-extra-boolean-cast
-    'no-extra-boolean-cast': 2,
-
-    // disallow unnecessary parentheses
-    // http://eslint.org/docs/rules/no-extra-parens
-    'no-extra-parens': [0, 'all', {
-      conditionalAssign: true,
-      nestedBinaryExpressions: false,
-      returnAssign: false,
+    // Forbid the use of extraneous packages
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: false,
+      optionalDependencies: false,
     }],
 
-    // disallow unnecessary semicolons
-    'no-extra-semi': 2,
+    // Forbid mutable exports
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
+    'import/no-mutable-exports': 'error',
 
-    // disallow overwriting functions written as function declarations
-    'no-func-assign': 2,
+    // Module systems:
 
-    // disallow function or variable declarations in nested blocks
-    'no-inner-declarations': 2,
+    // disallow require()
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
+    'import/no-commonjs': 'off',
 
-    // disallow invalid regular expression strings in the RegExp constructor
-    'no-invalid-regexp': 2,
+    // disallow AMD require/define
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
+    'import/no-amd': 'error',
 
-    // disallow irregular whitespace outside of strings and comments
-    'no-irregular-whitespace': 2,
+    // No Node.js builtin modules
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
+    // TODO: enable?
+    'import/no-nodejs-modules': 'off',
 
-    // disallow negation of the left operand of an in expression
-    'no-negated-in-lhs': 2,
+    // Style guide:
 
-    // disallow the use of object properties of the global object (Math and JSON) as functions
-    'no-obj-calls': 2,
+    // disallow non-import statements appearing before import statements
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md
+    'import/imports-first': ['error', 'absolute-first'],
 
-    // disallow use of Object.prototypes builtins directly
-    // http://eslint.org/docs/rules/no-prototype-builtins
-    'no-prototype-builtins': 2,
+    // disallow duplicate imports
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
+    'import/no-duplicates': 'error',
 
-    // disallow multiple spaces in a regular expression literal
-    'no-regex-spaces': 2,
+    // disallow namespace imports
+    // TODO: enable?
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
+    'import/no-namespace': 'off',
 
-    // disallow sparse arrays
-    'no-sparse-arrays': 2,
+    // Ensure consistent use of file extension within the import path
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    // TODO: enable when https://github.com/benmosher/eslint-plugin-import/issues/390 is resolved
+    'import/extensions': ['off', 'never'],
 
-    // Avoid code that looks like two expressions but is actually one
-    // http://eslint.org/docs/rules/no-unexpected-multiline
-    'no-unexpected-multiline': 2,
+    // Enforce a convention in module import order
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+    // TODO: enable?
+    'import/order': ['off', {
+      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      'newlines-between': 'never',
+    }],
 
-    // disallow unreachable statements after a return, throw, continue, or break statement
-    'no-unreachable': 2,
+    // Require a newline after the last import/require in a group
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
+    'import/newline-after-import': 'error',
 
-    // disallow return/throw/break/continue inside finally blocks
-    // http://eslint.org/docs/rules/no-unsafe-finally
-    'no-unsafe-finally': 2,
+    // Require modules with a single export to use a default export
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+    'import/prefer-default-export': 'error',
 
-    // disallow comparisons with the value NaN
-    'use-isnan': 2,
+    // Restrict which files can be imported in a given folder
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
+    'import/no-restricted-paths': 'off',
 
-    // ensure JSDoc comments are valid
-    // http://eslint.org/docs/rules/valid-jsdoc
-    'valid-jsdoc': 0,
+    // Forbid modules to have too many dependencies
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
+    'import/max-dependencies': ['off', {max: 10}],
 
-    // ensure that the results of typeof are compared against a valid string
-    'valid-typeof': 2
-  }
+    // Forbid import of modules using absolute paths
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
+    // TODO: enable, semver-major
+    'import/no-absolute-path': ['off'],
+  },
 };
