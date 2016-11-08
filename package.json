@@ -14,14 +14,14 @@
   ],
   "devDependencies": {
     "eslint": "^3.5.0",
-    "eslint-plugin-import": "^1.15.0",
-    "eslint-plugin-jsx-a11y": "^2.2.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^3.0.0",
     "eslint-plugin-react": "^6.2.0"
   },
   "peerDependencies": {
     "eslint": "^3.5.0",
     "eslint-plugin-import": "^2.0.0",
-    "eslint-plugin-jsx-a11y": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.0",
     "eslint-plugin-react": "^6.2.0"
   },
   "author": "Tom Adam Shani <tom@tomshani.com>",
