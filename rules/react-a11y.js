@@ -53,6 +53,8 @@ module.exports = {
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md
     'jsx-a11y/no-access-key': 'error',
 
+    'jsx-a11y/no-marquee': 'off',
+
     // require onBlur instead of onChange
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-onchange.md
     'jsx-a11y/no-onchange': 'off',
