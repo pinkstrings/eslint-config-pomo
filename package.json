@@ -1,11 +1,11 @@
 {
   "name": "eslint-config-pomo",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Custom eslint config, based on eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
-    "fix": "eslint --fix ./rules; exit 0",
-    "test": "eslint ./rules; exit 0"
+    "lint:fix": "eslint --fix ./rules; exit 0",
+    "lint": "eslint ./rules; exit 0"
   },
   "keywords": [
     "eslint",
