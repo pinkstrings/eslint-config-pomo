@@ -45,7 +45,7 @@ module.exports = {
     'no-extra-parens': [0, 'all', {
       conditionalAssign: true,
       nestedBinaryExpressions: false,
-      returnAssign: false,
+      returnAssign: false
     }],
 
     // disallow unnecessary semicolons
@@ -100,4 +100,4 @@ module.exports = {
     // ensure that the results of typeof are compared against a valid string
     'valid-typeof': 2
   }
-};
+}

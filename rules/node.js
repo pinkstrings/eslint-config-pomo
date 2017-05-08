@@ -1,7 +1,5 @@
 module.exports = {
-  env: {
-    node: true
-  },
+  env: { node: true },
 
   rules: {
     // enforce return after a callback
@@ -34,6 +32,6 @@ module.exports = {
     'no-restricted-modules': 0,
 
     // disallow use of synchronous methods (off by default)
-    'no-sync': 0,
+    'no-sync': 0
   }
-};
+}

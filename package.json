@@ -1,11 +1,11 @@
 {
   "name": "eslint-config-pomo",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Custom eslint config, based on eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
-    "fix": "eslint --fix ./rules && exit 1",
-    "test": "eslint ./rules && exit 1"
+    "fix": "eslint --fix ./rules; exit 0",
+    "test": "eslint ./rules; exit 0"
   },
   "keywords": [
     "eslint",
@@ -15,16 +15,16 @@
   "devDependencies": {
     "eslint": "^3.5.0",
     "eslint-plugin-import": "^2.0.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.2.0"
+    "eslint-plugin-jsx-a11y": "^5.0.0",
+    "eslint-plugin-react": "^7.0.0"
   },
   "peerDependencies": {
-    "eslint": "^3.5.0",
+    "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.0.0"
   },
   "optionalDependencies": {
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.2.0"
+    "eslint-plugin-jsx-a11y": "^5.0.0",
+    "eslint-plugin-react": "^7.0.0"
   },
   "author": "Tom Adam Shani <tom@tomshani.com>",
   "repository": {

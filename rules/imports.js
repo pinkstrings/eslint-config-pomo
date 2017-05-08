@@ -1,7 +1,5 @@
 module.exports = {
-  env: {
-    es6: true
-  },
+  env: { es6: true },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module'
@@ -11,21 +9,17 @@ module.exports = {
   ],
 
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.json']
-      }
-    },
+    'import/resolver': { node: { extensions: ['.js', '.json'] } },
     'import/extensions': [
       '.js',
-      '.jsx',
+      '.jsx'
     ],
     'import/core-modules': [
     ],
     'import/ignore': [
       'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$',
-    ],
+      '\\.(coffee|scss|css|less|hbs|svg|json)$'
+    ]
   },
 
   rules: {
@@ -33,7 +27,7 @@ module.exports = {
 
     // ensure imports point to files/modules that can be resolved
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-    'import/no-unresolved': ['error', {commonjs: true}],
+    'import/no-unresolved': ['error', { commonjs: true }],
 
     // ensure named imports coupled with named exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
@@ -68,7 +62,7 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
     'import/no-extraneous-dependencies': ['error', {
       devDependencies: false,
-      optionalDependencies: false,
+      optionalDependencies: false
     }],
 
     // Forbid mutable exports
@@ -115,7 +109,7 @@ module.exports = {
     // TODO: enable?
     'import/order': ['off', {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      'newlines-between': 'never',
+      'newlines-between': 'never'
     }],
 
     // Require a newline after the last import/require in a group
@@ -132,11 +126,11 @@ module.exports = {
 
     // Forbid modules to have too many dependencies
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
-    'import/max-dependencies': ['off', {max: 10}],
+    'import/max-dependencies': ['off', { max: 10 }],
 
     // Forbid import of modules using absolute paths
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
     // TODO: enable, semver-major
-    'import/no-absolute-path': ['off'],
-  },
-};
+    'import/no-absolute-path': ['off']
+  }
+}

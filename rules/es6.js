@@ -1,7 +1,5 @@
 module.exports = {
-  env: {
-    es6: true
-  },
+  env: { es6: true },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
@@ -21,7 +19,7 @@ module.exports = {
 
     // require space before/after arrow function's arrow
     // http://eslint.org/docs/rules/arrow-spacing
-    'arrow-spacing': [2, {before: true, after: true}],
+    'arrow-spacing': [2, { before: true, after: true }],
 
     // verify super() callings in constructors
     'constructor-super': 2,
@@ -37,9 +35,7 @@ module.exports = {
 
     // disallow arrow functions where they could be confused with comparisons
     // http://eslint.org/docs/rules/no-confusing-arrow
-    'no-confusing-arrow': [2, {
-      allowParens: true,
-    }],
+    'no-confusing-arrow': [2, { allowParens: true }],
 
     // disallow modifying variables that are declared using const
     'no-const-assign': 2,
@@ -77,7 +73,7 @@ module.exports = {
     'no-useless-rename': [2, {
       ignoreDestructuring: false,
       ignoreImport: false,
-      ignoreExport: false,
+      ignoreExport: false
     }],
 
     // require let or const instead of var
@@ -87,19 +83,19 @@ module.exports = {
     // http://eslint.org/docs/rules/object-shorthand
     'object-shorthand': [2, 'always', {
       ignoreConstructors: false,
-      avoidQuotes: true,
+      avoidQuotes: true
     }],
 
     // suggest using arrow functions as callbacks
     'prefer-arrow-callback': [2, {
       allowNamedFunctions: false,
-      allowUnboundThis: true,
+      allowUnboundThis: true
     }],
 
     // suggest using of const declaration for variables that are never modified after declared
     'prefer-const': [2, {
       destructuring: 'any',
-      ignoreReadBeforeAssign: true,
+      ignoreReadBeforeAssign: true
     }],
 
     // suggest using Reflect methods where applicable
@@ -132,7 +128,7 @@ module.exports = {
     'sort-imports': [0, {
       ignoreCase: false,
       ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
     }],
 
     // enforce usage of spacing in template strings
@@ -143,4 +139,4 @@ module.exports = {
     // http://eslint.org/docs/rules/yield-star-spacing
     'yield-star-spacing': [2, 'after']
   }
-};
+}
