@@ -31,7 +31,9 @@ module.exports = {
     'react/no-will-update-set-state': 2,
     'react/prefer-es6-class': [2, 'always'],
     'react/prefer-stateless-function': 2,
-    'react/prop-types': [2, { ignore: [], customValidators: [] }],
+    'react/prop-types': [2, {
+      ignore: [], customValidators: []
+    }],
     'react/react-in-jsx-scope': 2,
     'react/require-default-props': 2,
     'react/require-optimization': [0, { allowDecorators: [] }],
@@ -48,7 +50,9 @@ module.exports = {
         'render'
       ]
     }],
-    'react/sort-prop-types': [2, { ignoreCase: false, callbacksLast: false, requiredFirst: false }],
+    'react/sort-prop-types': [2, {
+      ignoreCase: false, callbacksLast: false, requiredFirst: false
+    }],
     'react/style-prop-object': 2,
     'react/void-dom-elements-no-children': 2,
 
@@ -58,18 +62,26 @@ module.exports = {
     'react/jsx-equals-spacing': [2, 'never'],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx'] }],
     'react/jsx-first-prop-new-line': [2, 'multiline'],
-    'react/jsx-handler-names': [0, { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }],
+    'react/jsx-handler-names': [0, {
+      eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on'
+    }],
     'react/jsx-indent-props': [2, 2],
     'react/jsx-indent': [2, 2],
     'react/jsx-key': 2,
-    'react/jsx-max-props-per-line': [1, { when: 'multiline', maximum: 1 }],
-    'react/jsx-no-bind': [2, { ignoreRefs: true, allowArrowFunctions: true, allowBind: false }],
+    'react/jsx-max-props-per-line': [1, {
+      when: 'multiline', maximum: 1
+    }],
+    'react/jsx-no-bind': [2, {
+      ignoreRefs: true, allowArrowFunctions: true, allowBind: false
+    }],
     'react/jsx-no-comment-textnodes': 2,
     'react/jsx-no-duplicate-props': [1, { ignoreCase: false }],
     'react/jsx-no-literals': 1,
     'react/jsx-no-target-blank': 2,
     'react/jsx-no-undef': 2,
-    'react/jsx-pascal-case': [2, { allowAllCaps: true, ignore: [] }],
+    'react/jsx-pascal-case': [2, {
+      allowAllCaps: true, ignore: []
+    }],
     'react/jsx-sort-props': [1, {
       callbacksLast: false,
       ignoreCase: false,
@@ -78,7 +90,9 @@ module.exports = {
       shorthandFirst: false,
       shorthandLast: false
     }],
-    'react/jsx-tag-spacing': [2, { afterOpening: 'never', beforeSelfClosing: 'always', closingSlash: 'never' }],
+    'react/jsx-tag-spacing': [2, {
+      afterOpening: 'never', beforeSelfClosing: 'always', closingSlash: 'never'
+    }],
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
     'react/jsx-wrap-multilines': 2
