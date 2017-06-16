@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pomo",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Custom eslint config, based on eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
