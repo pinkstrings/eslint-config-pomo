@@ -30,10 +30,6 @@ module.exports = {
 
   parserOptions: {
     ecmaVersion: 7,
-    sourceType: 'module',
-    ecmaFeatures: {
-      generators: false,
-      objectLiteralDuplicateProperties: false
-    }
+    sourceType: 'module'
   }
 };

@@ -3,7 +3,6 @@ module.exports = {
     'jsx-a11y',
     'react'
   ],
-  ecmaFeatures: { jsx: true },
   rules: {
     'jsx-a11y/accessible-emoji': 2,
     'jsx-a11y/alt-text': 2,

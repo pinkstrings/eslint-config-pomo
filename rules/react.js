@@ -2,8 +2,6 @@ module.exports = {
   plugins: [
     'react'
   ],
-  parserOptions: { ecmaFeatures: { jsx: true } },
-  ecmaFeatures: { jsx: true },
 
   rules: {
     'jsx-quotes': [2, 'prefer-single'],
