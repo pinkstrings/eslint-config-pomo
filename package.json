@@ -13,7 +13,7 @@
     "eslintrc"
   ],
   "devDependencies": {
-    "eslint": "^3.5.0",
+    "eslint": "^4.0.0",
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-jsx-a11y": "^5.0.0",
     "eslint-plugin-react": "^7.0.0"
