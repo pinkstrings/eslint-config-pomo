@@ -18,18 +18,18 @@
     "url": "https://github.com/pinkstrings/eslint-config-pomo"
   },
   "license": "MIT",
-  "devDependencies": {
-    "eslint": "^4.3.0",
+  "dependencies": {
     "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-pomo-base": "^1.0.2",
+    "eslint-config-pomo-base": "^1.0.3"
+  },
+  "peerDependencies": {
+    "eslint": "^4.3.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0"
   },
-  "peerDependencies": {
+  "devDependencies": {
     "eslint": "^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-pomo-base": "^1.0.2",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0"

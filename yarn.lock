@@ -286,7 +286,7 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-airbnb-base@^11.3.0:
+eslint-config-airbnb-base@^11.3.0, eslint-config-airbnb-base@^11.3.1:
   version "11.3.1"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-11.3.1.tgz#c0ab108c9beed503cb999e4c60f4ef98eda0ed30"
   dependencies:
@@ -298,9 +298,11 @@ eslint-config-airbnb@^15.1.0:
   dependencies:
     eslint-config-airbnb-base "^11.3.0"
 
-eslint-config-pomo-base@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-pomo-base/-/eslint-config-pomo-base-1.0.2.tgz#7daef6a4e7055eb2a1da3882ca4dcecc65c82681"
+eslint-config-pomo-base@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-pomo-base/-/eslint-config-pomo-base-1.0.3.tgz#6142ad16fdf6b0412ae52186b7635b4bc8d8b028"
+  dependencies:
+    eslint-config-airbnb-base "^11.3.1"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.1"
