@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-pomo-base": "^1.0.3"
+    "eslint-config-pomo-base": "^1.0.4"
   },
   "peerDependencies": {
     "eslint": "^4.3.0",
