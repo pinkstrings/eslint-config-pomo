@@ -1,7 +1,6 @@
 {
   "extends": "./index.js",
   "rules": {
-    "max-len": 0,
     "quote-props": 0
   }
 }
